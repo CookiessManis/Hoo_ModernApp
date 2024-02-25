@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import styles from "../style";
 import { discount, robot } from "../assets";
 import GetStarted from "../components/GetStarted";
@@ -53,7 +53,7 @@ const Hero = () => {
         <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
       </div>
 
-      <div className={`ss:hidden ${styles.flexCenter}`}>
+      <div className={`ss:hidden ${styles.flexCenter} `}>
         <GetStarted />
       </div>
     </section>
