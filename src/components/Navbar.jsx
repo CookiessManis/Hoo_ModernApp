@@ -3,6 +3,7 @@ import { logo, close, menu } from "../assets";
 import { navLinks } from "../constans";
 
 const Navbar = () => {
+  const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
@@ -12,10 +13,11 @@ const Navbar = () => {
           <li
             key={nav.id}
             className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              index === navLinks.length - 1 ? `mr-0` : `mr-10`
-            } text-white`}
+              active === nav.title ? "text-white" : "text-dimWhite"
+            } ${index === navLinks.length - 1 ? `mr-0` : `mr-10`} text-white`}
+            onClick={() => setActive(nav.title)}
           >
-            <a href={`${nav.id}`}>{nav.title}</a>
+            <a href={`#${nav.id}`}>{nav.title}</a>
           </li>
         ))}
       </ul>
